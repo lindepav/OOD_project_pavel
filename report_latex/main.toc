@@ -41,7 +41,7 @@
 \contentsline {paragraph}{OOD datasets}{12}{section*.57}%
 \contentsline {paragraph}{Classification model training}{12}{section*.58}%
 \contentsline {subsection}{\numberline {6.2}OOD detection}{12}{subsection.59}%
-\contentsline {paragraph}{MSP, JointEnergy, Mahalanobis}{12}{section*.60}%
+\contentsline {paragraph}{MSP, JointEnergy, ODIN}{12}{section*.60}%
 \contentsline {paragraph}{GradNorm}{13}{section*.61}%
 \contentsline {subsection}{\numberline {6.3}Evaluation settings}{13}{subsection.62}%
 \contentsline {paragraph}{Evaluation pipeline}{13}{section*.63}%

@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1685717903 "main.aux" "main.bbl" "main" 1685717904 0
+["bibtex main"] 1685722750 "main.aux" "main.bbl" "main" 1685722751 0
   "./main.bib" 1685702293 58730 8e41b65be515a505e155ba9b2dd94623 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1685717904 12888 5cd0c0259e8589563ffc2db379c36aa2 "pdflatex"
+  "main.aux" 1685722751 13078 6233c79d984762dbece11c4696241115 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1685717903 "/Users/lindepav/Documents/GitHub/OOD_detection_multi_label/report_latex/main.tex" "main.pdf" "main" 1685717904 0
-  "/Users/lindepav/Documents/GitHub/OOD_detection_multi_label/report_latex/main.tex" 1685717901 2453 a135134100c2e601785024118dca3db8 ""
+["pdflatex"] 1685722750 "/Users/lindepav/Documents/GitHub/OOD_project_pavel/report_latex/main.tex" "main.pdf" "main" 1685722751 0
+  "/Users/lindepav/Documents/GitHub/OOD_project_pavel/report_latex/main.tex" 1685717901 2453 a135134100c2e601785024118dca3db8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -158,19 +158,19 @@
   "fig/energy_aggregation.png" 1685709169 151629 ee747202267cb94d1c1af28b1fa15be1 ""
   "fig/textures_example.png" 1685709169 243633 bb6044e3fe6d9889a8b08766575faf81 ""
   "fig/yolood_arch.png" 1685709169 254122 67f5494e6bfba0b0b37352ade297d9bc ""
-  "main.aux" 1685717904 12888 5cd0c0259e8589563ffc2db379c36aa2 "pdflatex"
-  "main.bbl" 1685717903 6587 2f72424c475dcf67bb68aab83c3a599f "bibtex main"
-  "main.out" 1685717904 3042 ec82b88279110d9444c050477fac3ece "pdflatex"
+  "main.aux" 1685722751 13078 6233c79d984762dbece11c4696241115 "pdflatex"
+  "main.bbl" 1685722750 6587 2f72424c475dcf67bb68aab83c3a599f "bibtex main"
+  "main.out" 1685722751 3042 ec82b88279110d9444c050477fac3ece "pdflatex"
   "main.tex" 1685717901 2453 a135134100c2e601785024118dca3db8 ""
-  "main.toc" 1685717904 3658 64e443f2ab16c65ddefc5e0ca87b08cd "pdflatex"
+  "main.toc" 1685722751 3651 2bafb47267c07e92b01de2a2fc6f8fdc "pdflatex"
   "makeconfig.tex" 1685709170 1 68b329da9893e34099c7d8ad5cb9c940 ""
   "src/background.tex" 1685631750 5125 b788232577a48d924d97f82a156b90f9 ""
   "src/conclusion.tex" 1685714825 1352 2b013e2b0977e4399933f6108539bd4e ""
   "src/datasets.tex" 1685663414 2468 5557acc93195a7e450c24f067af8c3c9 ""
   "src/doc_head.tex" 1685383966 5742 5051e86c3271936fcbb3db18ba6baea3 ""
-  "src/experiments.tex" 1685717767 8856 4fdf5f0ce89733c6ca5c24e134facc45 ""
+  "src/experiments.tex" 1685722748 8658 b8bb13cd27f04efe4c71e558661e64d7 ""
   "src/introduction.tex" 1685715754 3347 7c70cb933700b5d47d656a1e2f0c0264 ""
-  "src/sota.tex" 1685634126 7683 7622a0fc7f08552e58e413c5414876d6 ""
+  "src/sota.tex" 1685722281 7683 5d19ea6d375ef553b852fe1689d72590 ""
   "src/system.tex" 1685709441 6337 08d70dbdc72beb03605b504f7869a48a ""
   "src/title.tex" 1685612647 608 3ec52468a0b52184e2f85f7ecbe19ec0 ""
   (generated)

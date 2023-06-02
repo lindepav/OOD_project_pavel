@@ -3,14 +3,12 @@ In this section, we evaluate some of the existing state-of-the-art methods for m
  on public datasets in order to assess how they compare on identical settings. 
  To compare state-of-the-art methods, we will be using pre-trained networks with identical weights and experimentation methodology.
 
-To provide a nice overview of the methods we select \textbf{MSP} as a baseline of multi-label OOD detection and \textbf{JointEnergy} with \textbf{Mahalanobis} for state-of-the-art methods.
-\textbf{JointEnergy} and \textbf{MSP} are instances of output-based and \textbf{Mahalanobis} are instances of feature-based detectors.
+To provide a nice overview of the methods we select \textbf{MSP} as a baseline of multi-label OOD detection and \textbf{JointEnergy} with \textbf{ODIN} for state-of-the-art methods.
 All three methods were implemented to have the same evaluation pipeline. 
-As a bonus, \textbf{GradNorm} for gradient-based methods will be tried to utilize for multi-label classifiers.
+As a bonus, \textbf{GradNorm} will be converted for multi-label classifiers.
 
 The evaluation was performed on datasets that have been utilized across multiple papers about multi-label OOD detection. 
 As an outcome a new comparison of the methods will be made. 
-For the purpose of evaluation, datasets utilized in both of these works were utilized. 
 The labels of the ID datasets are different from the labels of the OOD datasets in this evaluation to reduce bias.
 
 \subsection{Experimental setup}
@@ -33,7 +31,7 @@ Data was augmented with random crops and flips.
 Achieved mAP is 87.51\% for PASCAL-VOC, 73.83\% for MS-COCO. 
 
 \subsection{OOD detection}
-\paragraph{MSP, JointEnergy, Mahalanobis}
+\paragraph{MSP, JointEnergy, ODIN}
 We use the public implementation of original authors to produce OOD scores. 
 
 \paragraph{GradNorm}
@@ -75,7 +73,7 @@ These metrics include:
 \subsection{Results}
 The evaluation was done with two different models (trained on MS-COCO and Pascal dataset). 
 Also for the OOD detection we use three datasets (subset of ImageNet22k, TACO and Textures).
-In \autoref{table:idk} you can see the average results over the OOD datasets for JointEnergy, MSP and Mahalanobis. 
+In \autoref{experiments:table1} you can see the results over all three OOD datasets for JointEnergy, MSP and ODIN. 
 We see that JointEnergy has the best performance across all OOD datasets.
 
 The results from GradNorm implementation with the same setting as describe above were opposing the expectations. 
@@ -99,6 +97,7 @@ There must be more experimantation done with this but we can state that the dire
 \multicolumn{1}{c|}{\textit{TACO}}     & ODIN               & 29.23                         & 92.34                              & 97.23                 & 27.54                 & 93.43                & 97.80                \\
 \multicolumn{1}{l|}{}                  & JointEnergy        & 20.20                         & 95.82                              & 99.82                 & \textbf{11.80}        & \textbf{97.51}       & \textbf{99.90}       \\ \hline
 \end{tabular}
-\label{table:idk}
+\caption{Quantitative comparison of MSP, ODIN and JointEnergy.}
+\label{experiments:table1}
 \end{table}
 
