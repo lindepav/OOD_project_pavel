@@ -1,0 +1,320 @@
+@article{Amit2020,
+  title = {{{FOOD}}: {{Fast}} out-of-Distribution Detector},
+  author = {Amit, Guy and Levy, Moshe and Rosenberg, Ishai and Shabtai, Asaf and Elovici, Yuval},
+  year = {2020},
+  month = aug,
+  abstract = {Deep neural networks (DNNs) perform well at classifying inputs associated with the classes they have been trained on, which are known as in distribution inputs. However, out-of-distribution (OOD) inputs pose a great challenge to DNNs and consequently represent a major risk when DNNs are implemented in safety-critical systems. Extensive research has been performed in the domain of OOD detection. However, current state-of-the-art methods for OOD detection suffer from at least one of the following limitations: (1) increased inference time - this limits existing methods' applicability to many real-world applications, and (2) the need for OOD training data - such data can be difficult to acquire and may not be representative enough, thus limiting the ability of the OOD detector to generalize. In this paper, we propose FOOD \textendash{} Fast Out-Of-Distribution detector \textendash{} an extended DNN classifier capable of efficiently detecting OOD samples with minimal inference time overhead. Our architecture features a DNN with a final Gaussian layer combined with the log likelihood ratio statistical test and an additional output neuron for OOD detection. Instead of using real OOD data, we use a novel method to craft artificial OOD samples from in-distribution data, which are used to train our OOD detector neuron. We evaluate FOOD's detection performance on the SVHN, CIFAR-10, and CIFAR-100 datasets. Our results demonstrate that in addition to achieving state-of-the-art performance, FOOD is fast and applicable to real-world applications.}
+}
+
+@article{Amodei2016,
+  title = {Concrete Problems in {{AI}} Safety},
+  author = {Amodei, Dario and Olah, Chris and Steinhardt, Jacob and Christiano, Paul and Schulman, John and Man{\'e}, Dan},
+  year = {2016},
+  month = jun,
+  abstract = {Rapid progress in machine learning and artificial intelligence (AI) has brought increasing attention to the potential impacts of AI technologies on society. In this paper we discuss one such potential impact: the problem of accidents in machine learning systems, defined as unintended and harmful behavior that may emerge from poor design of real-world AI systems. We present a list of five practical research problems related to accident risk, categorized according to whether the problem originates from having the wrong objective function ("avoiding side effects" and "avoiding reward hacking"), an objective function that is too expensive to evaluate frequently ("scalable supervision"), or undesirable behavior during the learning process ("safe exploration" and "distributional shift"). We review previous work in these areas as well as suggesting research directions with a focus on relevance to cutting-edge AI systems. Finally, we consider the high-level question of how to think most productively about the safety of forward-looking applications of AI.}
+}
+
+@misc{bochkovskiyYOLOv4OptimalSpeed2020,
+  title = {{{YOLOv4}}: {{Optimal Speed}} and {{Accuracy}} of {{Object Detection}}},
+  shorttitle = {{{YOLOv4}}},
+  author = {Bochkovskiy, Alexey and Wang, Chien-Yao and Liao, Hong-Yuan Mark},
+  year = {2020},
+  month = apr,
+  number = {arXiv:2004.10934},
+  eprint = {2004.10934},
+  primaryclass = {cs, eess},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2004.10934},
+  urldate = {2023-05-31},
+  abstract = {There are a huge number of features which are said to improve Convolutional Neural Network (CNN) accuracy. Practical testing of combinations of such features on large datasets, and theoretical justification of the result, is required. Some features operate on certain models exclusively and for certain problems exclusively, or only for small-scale datasets; while some features, such as batch-normalization and residual-connections, are applicable to the majority of models, tasks, and datasets. We assume that such universal features include Weighted-Residual-Connections (WRC), Cross-Stage-Partial-connections (CSP), Cross mini-Batch Normalization (CmBN), Self-adversarial-training (SAT) and Mish-activation. We use new features: WRC, CSP, CmBN, SAT, Mish activation, Mosaic data augmentation, CmBN, DropBlock regularization, and CIoU loss, and combine some of them to achieve state-of-the-art results: 43.5\% AP (65.7\% AP50) for the MS COCO dataset at a realtime speed of \textasciitilde 65 FPS on Tesla V100. Source code is at https://github.com/AlexeyAB/darknet},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Electrical Engineering and Systems Science - Image and Video Processing},
+  file = {/Users/lindepav/Zotero/storage/4DMZDTJ7/Bochkovskiy et al. - 2020 - YOLOv4 Optimal Speed and Accuracy of Object Detec.pdf;/Users/lindepav/Zotero/storage/JUWT6QG8/2004.html}
+}
+
+@misc{dosovitskiyImageWorth16x162021,
+  title = {An {{Image}} Is {{Worth}} 16x16 {{Words}}: {{Transformers}} for {{Image Recognition}} at {{Scale}}},
+  shorttitle = {An {{Image}} Is {{Worth}} 16x16 {{Words}}},
+  author = {Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and Uszkoreit, Jakob and Houlsby, Neil},
+  year = {2021},
+  month = jun,
+  number = {arXiv:2010.11929},
+  eprint = {2010.11929},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2010.11929},
+  urldate = {2023-05-31},
+  abstract = {While the Transformer architecture has become the de-facto standard for natural language processing tasks, its applications to computer vision remain limited. In vision, attention is either applied in conjunction with convolutional networks, or used to replace certain components of convolutional networks while keeping their overall structure in place. We show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks. When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring substantially fewer computational resources to train.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/Users/lindepav/Zotero/storage/Y54HDE4U/Dosovitskiy et al. - 2021 - An Image is Worth 16x16 Words Transformers for Im.pdf;/Users/lindepav/Zotero/storage/VEJ8NT9F/2010.html}
+}
+
+@misc{girshickRichFeatureHierarchies2014,
+  title = {Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation},
+  author = {Girshick, Ross and Donahue, Jeff and Darrell, Trevor and Malik, Jitendra},
+  year = {2014},
+  month = oct,
+  number = {arXiv:1311.2524},
+  eprint = {1311.2524},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1311.2524},
+  urldate = {2023-05-31},
+  abstract = {Object detection performance, as measured on the canonical PASCAL VOC dataset, has plateaued in the last few years. The best-performing methods are complex ensemble systems that typically combine multiple low-level image features with high-level context. In this paper, we propose a simple and scalable detection algorithm that improves mean average precision (mAP) by more than 30\% relative to the previous best result on VOC 2012---achieving a mAP of 53.3\%. Our approach combines two key insights: (1) one can apply high-capacity convolutional neural networks (CNNs) to bottom-up region proposals in order to localize and segment objects and (2) when labeled training data is scarce, supervised pre-training for an auxiliary task, followed by domain-specific fine-tuning, yields a significant performance boost. Since we combine region proposals with CNNs, we call our method R-CNN: Regions with CNN features. We also compare R-CNN to OverFeat, a recently proposed sliding-window detector based on a similar CNN architecture. We find that R-CNN outperforms OverFeat by a large margin on the 200-class ILSVRC2013 detection dataset. Source code for the complete system is available at http://www.cs.berkeley.edu/\textasciitilde rbg/rcnn.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/lindepav/Zotero/storage/H6MDATE3/Girshick et al. - 2014 - Rich feature hierarchies for accurate object detec.pdf;/Users/lindepav/Zotero/storage/WL4HUZAY/1311.html}
+}
+
+@misc{heMaskRCNN2018,
+  title = {Mask {{R-CNN}}},
+  author = {He, Kaiming and Gkioxari, Georgia and Doll{\'a}r, Piotr and Girshick, Ross},
+  year = {2018},
+  month = jan,
+  number = {arXiv:1703.06870},
+  eprint = {1703.06870},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1703.06870},
+  urldate = {2023-05-31},
+  abstract = {We present a conceptually simple, flexible, and general framework for object instance segmentation. Our approach efficiently detects objects in an image while simultaneously generating a high-quality segmentation mask for each instance. The method, called Mask R-CNN, extends Faster R-CNN by adding a branch for predicting an object mask in parallel with the existing branch for bounding box recognition. Mask R-CNN is simple to train and adds only a small overhead to Faster R-CNN, running at 5 fps. Moreover, Mask R-CNN is easy to generalize to other tasks, e.g., allowing us to estimate human poses in the same framework. We show top results in all three tracks of the COCO suite of challenges, including instance segmentation, bounding-box object detection, and person keypoint detection. Without bells and whistles, Mask R-CNN outperforms all existing, single-model entries on every task, including the COCO 2016 challenge winners. We hope our simple and effective approach will serve as a solid baseline and help ease future research in instance-level recognition. Code has been made available at: https://github.com/facebookresearch/Detectron},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/lindepav/Zotero/storage/WQ69K6FL/He et al. - 2018 - Mask R-CNN.pdf;/Users/lindepav/Zotero/storage/YRMZATN4/1703.html}
+}
+
+@article{Hendrycks2016,
+  title = {A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks},
+  author = {Hendrycks, Dan and Gimpel, Kevin},
+  year = {2016},
+  month = oct,
+  abstract = {We consider the two related problems of detecting if an example is misclassified or out-of-distribution. We present a simple baseline that utilizes probabilities from softmax distributions. Correctly classified examples tend to have greater maximum softmax probabilities than erroneously classified and out-of-distribution examples, allowing for their detection. We assess performance by defining several tasks in computer vision, natural language processing, and automatic speech recognition, showing the effectiveness of this baseline across all. We then show the baseline can sometimes be surpassed, demonstrating the room for future research on these underexplored detection tasks.}
+}
+
+@article{Hendrycks2020,
+  title = {The Many Faces of Robustness: {{A}} Critical Analysis of out-of-Distribution Generalization},
+  author = {Hendrycks, Dan and Basart, Steven and Mu, Norman and Kadavath, Saurav and Wang, Frank and Dorundo, Evan and Desai, Rahul and Zhu, Tyler and Parajuli, Samyak and Guo, Mike and Song, Dawn and Steinhardt, Jacob and Gilmer, Justin},
+  year = {2020},
+  month = jun,
+  abstract = {We introduce four new real-world distribution shift datasets consisting of changes in image style, image blurriness, geographic location, camera operation, and more. With our new datasets, we take stock of previously proposed methods for improving out-of-distribution robustness and put them to the test. We find that using larger models and artificial data augmentations can improve robustness on real-world distribution shifts, contrary to claims in prior work. We find improvements in artificial robustness benchmarks can transfer to real-world distribution shifts, contrary to claims in prior work. Motivated by our observation that data augmentations can help with real-world distribution shifts, we also introduce a new data augmentation method which advances the state-of-the-art and outperforms models pretrained with 1000 times more labeled data. Overall we find that some methods consistently help with distribution shifts in texture and local image statistics, but these methods do not help with some other distribution shifts like geographic changes. Our results show that future research must study multiple distribution shifts simultaneously, as we demonstrate that no evaluated method consistently improves robustness.}
+}
+
+@article{hornINaturalistSpeciesClassification2017,
+  title = {The {{iNaturalist}} Species Classification and Detection Dataset},
+  author = {Horn, Grant Van and Aodha, Oisin Mac and Song, Yang and Cui, Yin and Sun, Chen and Shepard, Alex and Adam, Hartwig and Perona, Pietro and Belongie, Serge},
+  year = {2017},
+  month = jul,
+  abstract = {Existing image classification datasets used in computer vision tend to have a uniform distribution of images across object categories. In contrast, the natural world is heavily imbalanced, as some species are more abundant and easier to photograph than others. To encourage further progress in challenging real world conditions we present the iNaturalist species classification and detection dataset, consisting of 859,000 images from over 5,000 different species of plants and animals. It features visually similar species, captured in a wide variety of situations, from all over the world. Images were collected with different camera types, have varying image quality, feature a large class imbalance, and have been verified by multiple citizen scientists. We discuss the collection of the dataset and present extensive baseline experiments using state-of-the-art computer vision classification and detection models. Results show that current non-ensemble based methods achieve only 67\% top one classification accuracy, illustrating the difficulty of the dataset. Specifically, we observe poor results for classes with small numbers of training examples suggesting more attention is needed in low-shot learning.}
+}
+
+@article{Hsu2020,
+  title = {Generalized {{ODIN}}: {{Detecting}} out-of-Distribution Image without Learning from out-of-Distribution Data},
+  author = {Hsu, Yen-Chang and Shen, Yilin and Jin, Hongxia and Kira, Zsolt},
+  year = {2020},
+  month = feb,
+  abstract = {Deep neural networks have attained remarkable performance when applied to data that comes from the same distribution as that of the training set, but can significantly degrade otherwise. Therefore, detecting whether an example is out-of-distribution (OoD) is crucial to enable a system that can reject such samples or alert users. Recent works have made significant progress on OoD benchmarks consisting of small image datasets. However, many recent methods based on neural networks rely on training or tuning with both in-distribution and out-of-distribution data. The latter is generally hard to define a-priori, and its selection can easily bias the learning. We base our work on a popular method ODIN, proposing two strategies for freeing it from the needs of tuning with OoD data, while improving its OoD detection performance. We specifically propose to decompose confidence scoring as well as a modified input pre-processing method. We show that both of these significantly help in detection performance. Our further analysis on a larger scale image dataset shows that the two types of distribution shifts, specifically semantic shift and non-semantic shift, present a significant difference in the difficulty of the problem, providing an analysis of when ODIN-like strategies do or do not work.}
+}
+
+@article{Huang2021,
+  title = {{{MOS}}: {{Towards}} Scaling out-of-Distribution Detection for Large Semantic Space},
+  author = {Huang, Rui and Li, Yixuan},
+  year = {2021},
+  month = may,
+  abstract = {Detecting out-of-distribution (OOD) inputs is a central challenge for safely deploying machine learning models in the real world. Existing solutions are mainly driven by small datasets, with low resolution and very few class labels (e.g., CIFAR). As a result, OOD detection for large-scale image classification tasks remains largely unexplored. In this paper, we bridge this critical gap by proposing a group-based OOD detection framework, along with a novel OOD scoring function termed MOS. Our key idea is to decompose the large semantic space into smaller groups with similar concepts, which allows simplifying the decision boundaries between in- vs. out-of-distribution data for effective OOD detection. Our method scales substantially better for high-dimensional class space than previous approaches. We evaluate models trained on ImageNet against four carefully curated OOD datasets, spanning diverse semantics. MOS establishes state-of-the-art performance, reducing the average FPR95 by 14.33\% while achieving 6x speedup in inference compared to the previous best method.}
+}
+
+@article{Lakshminarayanan2016,
+  title = {Simple and Scalable Predictive Uncertainty Estimation Using Deep Ensembles},
+  author = {Lakshminarayanan, Balaji and Pritzel, Alexander and Blundell, Charles},
+  year = {2016},
+  month = dec,
+  abstract = {Deep neural networks (NNs) are powerful black box predictors that have recently achieved impressive performance on a wide spectrum of tasks. Quantifying predictive uncertainty in NNs is a challenging and yet unsolved problem. Bayesian NNs, which learn a distribution over weights, are currently the state-of-the-art for estimating predictive uncertainty; however these require significant modifications to the training procedure and are computationally expensive compared to standard (non-Bayesian) NNs. We propose an alternative to Bayesian NNs that is simple to implement, readily parallelizable, requires very little hyperparameter tuning, and yields high quality predictive uncertainty estimates. Through a series of experiments on classification and regression benchmarks, we demonstrate that our method produces well-calibrated uncertainty estimates which are as good or better than approximate Bayesian NNs. To assess robustness to dataset shift, we evaluate the predictive uncertainty on test examples from known and unknown distributions, and show that our method is able to express higher uncertainty on out-of-distribution examples. We demonstrate the scalability of our method by evaluating predictive uncertainty estimates on ImageNet.}
+}
+
+@article{Lee2018,
+  title = {A Simple Unified Framework for Detecting Out-of-Distribution Samples and Adversarial Attacks},
+  author = {Lee, Kimin and Lee, Kibok and Lee, Honglak and Shin, Jinwoo},
+  year = {2018},
+  month = jul,
+  abstract = {Detecting test samples drawn sufficiently far away from the training distribution statistically or adversarially is a fundamental requirement for deploying a good classifier in many real-world machine learning applications. However, deep neural networks with the softmax classifier are known to produce highly overconfident posterior distributions even for such abnormal samples. In this paper, we propose a simple yet effective method for detecting any abnormal samples, which is applicable to any pre-trained softmax neural classifier. We obtain the class conditional Gaussian distributions with respect to (low- and upper-level) features of the deep models under Gaussian discriminant analysis, which result in a confidence score based on the Mahalanobis distance. While most prior methods have been evaluated for detecting either out-of-distribution or adversarial samples, but not both, the proposed method achieves the state-of-the-art performances for both cases in our experiments. Moreover, we found that our proposed method is more robust in harsh cases, e.g., when the training dataset has noisy labels or small number of samples. Finally, we show that the proposed method enjoys broader usage by applying it to class-incremental learning: whenever out-of-distribution samples are detected, our classification rule can incorporate new classes well without further training deep models.}
+}
+
+@article{Lee2020,
+  title = {Gradients as a Measure of Uncertainty in Neural Networks},
+  author = {Lee, Jinsol and AlRegib, Ghassan},
+  year = {2020},
+  month = aug,
+  abstract = {Despite tremendous success of modern neural networks, they are known to be overconfident even when the model encounters inputs with unfamiliar conditions. Detecting such inputs is vital to preventing models from making naive predictions that may jeopardize real-world applications of neural networks. In this paper, we address the challenging problem of devising a simple yet effective measure of uncertainty in deep neural networks. Specifically, we propose to utilize backpropagated gradients to quantify the uncertainty of trained models. Gradients depict the required amount of change for a model to properly represent given inputs, thus providing a valuable insight into how familiar and certain the model is regarding the inputs. We demonstrate the effectiveness of gradients as a measure of model uncertainty in applications of detecting unfamiliar inputs, including out-of-distribution and corrupted samples. We show that our gradient-based method outperforms state-of-the-art methods by up to 4.8\% of AUROC score in out-of-distribution detection and 35.7\% in corrupted input detection.}
+}
+
+@misc{leeSimpleUnifiedFramework2018,
+  title = {A {{Simple Unified Framework}} for {{Detecting Out-of-Distribution Samples}} and {{Adversarial Attacks}}},
+  author = {Lee, Kimin and Lee, Kibok and Lee, Honglak and Shin, Jinwoo},
+  year = {2018},
+  month = oct,
+  number = {arXiv:1807.03888},
+  eprint = {1807.03888},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1807.03888},
+  urldate = {2023-05-31},
+  abstract = {Detecting test samples drawn sufficiently far away from the training distribution statistically or adversarially is a fundamental requirement for deploying a good classifier in many real-world machine learning applications. However, deep neural networks with the softmax classifier are known to produce highly overconfident posterior distributions even for such abnormal samples. In this paper, we propose a simple yet effective method for detecting any abnormal samples, which is applicable to any pre-trained softmax neural classifier. We obtain the class conditional Gaussian distributions with respect to (low- and upper-level) features of the deep models under Gaussian discriminant analysis, which result in a confidence score based on the Mahalanobis distance. While most prior methods have been evaluated for detecting either out-of-distribution or adversarial samples, but not both, the proposed method achieves the state-of-the-art performances for both cases in our experiments. Moreover, we found that our proposed method is more robust in harsh cases, e.g., when the training dataset has noisy labels or small number of samples. Finally, we show that the proposed method enjoys broader usage by applying it to class-incremental learning: whenever out-of-distribution samples are detected, our classification rule can incorporate new classes well without further training deep models.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Cryptography and Security,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/Users/lindepav/Zotero/storage/JQ4DRN5C/Lee et al. - 2018 - A Simple Unified Framework for Detecting Out-of-Di.pdf;/Users/lindepav/Zotero/storage/BUW3HSEW/1807.html}
+}
+
+@article{Liang2017,
+  title = {Enhancing the Reliability of Out-of-Distribution Image Detection in Neural Networks},
+  author = {Liang, Shiyu and Li, Yixuan and Srikant, R.},
+  year = {2017},
+  month = jun,
+  journal = {6th International Conference on Learning Representations, ICLR 2018 - Conference Track Proceedings},
+  publisher = {{International Conference on Learning Representations, ICLR}},
+  abstract = {We consider the problem of detecting out-of-distribution images in neural networks. We propose ODIN, a simple and effective method that does not require any change to a pre-trained neural network. Our method is based on the observation that using temperature scaling and adding small perturbations to the input can separate the softmax score distributions between in- and out-of-distribution images, allowing for more effective detection. We show in a series of experiments that ODIN is compatible with diverse network architectures and datasets. It consistently outperforms the baseline approach by a large margin, establishing a new state-of-the-art performance on this task. For example, ODIN reduces the false positive rate from the baseline 34.7\% to 4.3\% on the DenseNet (applied to CIFAR-10) when the true positive rate is 95\%.}
+}
+
+@article{Lin2021,
+  title = {{{MOOD}}: {{Multi-level}} out-of-Distribution Detection},
+  author = {Lin, Ziqian and Roy, Sreya Dutta and Li, Yixuan},
+  year = {2021},
+  month = apr,
+  abstract = {Out-of-distribution (OOD) detection is essential to prevent anomalous inputs from causing a model to fail during deployment. While improved OOD detection methods have emerged, they often rely on the final layer outputs and require a full feedforward pass for any given input. In this paper, we propose a novel framework, multi-level out-of-distribution detection MOOD, which exploits intermediate classifier outputs for dynamic and efficient OOD inference. We explore and establish a direct relationship between the OOD data complexity and optimal exit level, and show that easy OOD examples can be effectively detected early without propagating to deeper layers. At each exit, the OOD examples can be distinguished through our proposed adjusted energy score, which is both empirically and theoretically suitable for networks with multiple classifiers. We extensively evaluate MOOD across 10 OOD datasets spanning a wide range of complexities. Experiments demonstrate that MOOD achieves up to 71.05\% computational reduction in inference, while maintaining competitive OOD detection performance.}
+}
+
+@article{Liu2020,
+  title = {Energy-Based out-of-Distribution Detection},
+  author = {Liu, Weitang and Wang, Xiaoyun and Owens, John D. and Li, Yixuan},
+  year = {2020},
+  month = oct,
+  abstract = {Determining whether inputs are out-of-distribution (OOD) is an essential building block for safely deploying machine learning models in the open world. However, previous methods relying on the softmax confidence score suffer from overconfident posterior distributions for OOD data. We propose a unified framework for OOD detection that uses an energy score. We show that energy scores better distinguish in- and out-of-distribution samples than the traditional approach using the softmax scores. Unlike softmax confidence scores, energy scores are theoretically aligned with the probability density of the inputs and are less susceptible to the overconfidence issue. Within this framework, energy can be flexibly used as a scoring function for any pre-trained neural classifier as well as a trainable cost function to shape the energy surface explicitly for OOD detection. On a CIFAR-10 pre-trained WideResNet, using the energy score reduces the average FPR (at TPR 95\%) by 18.03\% compared to the softmax confidence score. With energy-based training, our method outperforms the state-of-the-art on common benchmarks.}
+}
+
+@misc{liuEnergybasedOutofdistributionDetection2021,
+  title = {Energy-Based {{Out-of-distribution Detection}}},
+  author = {Liu, Weitang and Wang, Xiaoyun and Owens, John D. and Li, Yixuan},
+  year = {2021},
+  month = apr,
+  number = {arXiv:2010.03759},
+  eprint = {2010.03759},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2010.03759},
+  urldate = {2023-05-31},
+  abstract = {Determining whether inputs are out-of-distribution (OOD) is an essential building block for safely deploying machine learning models in the open world. However, previous methods relying on the softmax confidence score suffer from overconfident posterior distributions for OOD data. We propose a unified framework for OOD detection that uses an energy score. We show that energy scores better distinguish in- and out-of-distribution samples than the traditional approach using the softmax scores. Unlike softmax confidence scores, energy scores are theoretically aligned with the probability density of the inputs and are less susceptible to the overconfidence issue. Within this framework, energy can be flexibly used as a scoring function for any pre-trained neural classifier as well as a trainable cost function to shape the energy surface explicitly for OOD detection. On a CIFAR-10 pre-trained WideResNet, using the energy score reduces the average FPR (at TPR 95\%) by 18.03\% compared to the softmax confidence score. With energy-based training, our method outperforms the state-of-the-art on common benchmarks.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/Users/lindepav/Zotero/storage/8IUW2YNH/Liu et al. - 2021 - Energy-based Out-of-distribution Detection.pdf;/Users/lindepav/Zotero/storage/XTYRQE8A/2010.html}
+}
+
+@incollection{liuSSDSingleShot2016,
+  title = {{{SSD}}: {{Single Shot MultiBox Detector}}},
+  shorttitle = {{{SSD}}},
+  author = {Liu, Wei and Anguelov, Dragomir and Erhan, Dumitru and Szegedy, Christian and Reed, Scott and Fu, Cheng-Yang and Berg, Alexander C.},
+  year = {2016},
+  volume = {9905},
+  eprint = {1512.02325},
+  primaryclass = {cs},
+  pages = {21--37},
+  doi = {10.1007/978-3-319-46448-0_2},
+  urldate = {2023-05-31},
+  abstract = {We present a method for detecting objects in images using a single deep neural network. Our approach, named SSD, discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. At prediction time, the network generates scores for the presence of each object category in each default box and produces adjustments to the box to better match the object shape. Additionally, the network combines predictions from multiple feature maps with different resolutions to naturally handle objects of various sizes. Our SSD model is simple relative to methods that require object proposals because it completely eliminates proposal generation and subsequent pixel or feature resampling stage and encapsulates all computation in a single network. This makes SSD easy to train and straightforward to integrate into systems that require a detection component. Experimental results on the PASCAL VOC, MS COCO, and ILSVRC datasets confirm that SSD has comparable accuracy to methods that utilize an additional object proposal step and is much faster, while providing a unified framework for both training and inference. Compared to other single stage methods, SSD has much better accuracy, even with a smaller input image size. For \$300\textbackslash times 300\$ input, SSD achieves 72.1\% mAP on VOC2007 test at 58 FPS on a Nvidia Titan X and for \$500\textbackslash times 500\$ input, SSD achieves 75.1\% mAP, outperforming a comparable state of the art Faster R-CNN model. Code is available at https://github.com/weiliu89/caffe/tree/ssd .},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/lindepav/Zotero/storage/RW2CVQYM/Liu et al. - 2016 - SSD Single Shot MultiBox Detector.pdf;/Users/lindepav/Zotero/storage/TDDL2X7A/1512.html}
+}
+
+@article{Mohseni2021,
+  title = {Shifting Transformation Learning for Out-of-Distribution Detection},
+  author = {Mohseni, Sina and Vahdat, Arash and Yadawa, Jay},
+  year = {2021},
+  month = jun,
+  abstract = {Detecting out-of-distribution (OOD) samples plays a key role in open-world and safety-critical applications such as autonomous systems and healthcare. Recently, self-supervised representation learning techniques (via contrastive learning and pretext learning) have shown effective in improving OOD detection. However, one major issue with such approaches is the choice of shifting transformations and pretext tasks which depends on the in-domain distribution. In this paper, we propose a simple framework that leverages a shifting transformation learning setting for learning multiple shifted representations of the training set for improved OOD detection. To address the problem of selecting optimal shifting transformation and pretext tasks, we propose a simple mechanism for automatically selecting the transformations and modulating their effect on representation learning without requiring any OOD training samples. In extensive experiments, we show that our simple framework outperforms state-of-the-art OOD detection models on several image datasets. We also characterize the criteria for a desirable OOD detector for real-world applications and demonstrate the efficacy of our proposed technique against state-of-the-art OOD detection techniques.}
+}
+
+@misc{nguyenDeepNeuralNetworks2015,
+  title = {Deep {{Neural Networks}} Are {{Easily Fooled}}: {{High Confidence Predictions}} for {{Unrecognizable Images}}},
+  shorttitle = {Deep {{Neural Networks}} Are {{Easily Fooled}}},
+  author = {Nguyen, Anh and Yosinski, Jason and Clune, Jeff},
+  year = {2015},
+  month = apr,
+  number = {arXiv:1412.1897},
+  eprint = {1412.1897},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1412.1897},
+  urldate = {2023-05-31},
+  abstract = {Deep neural networks (DNNs) have recently been achieving state-of-the-art performance on a variety of pattern-recognition tasks, most notably visual classification problems. Given that DNNs are now able to classify objects in images with near-human-level performance, questions naturally arise as to what differences remain between computer and human vision. A recent study revealed that changing an image (e.g. of a lion) in a way imperceptible to humans can cause a DNN to label the image as something else entirely (e.g. mislabeling a lion a library). Here we show a related result: it is easy to produce images that are completely unrecognizable to humans, but that state-of-the-art DNNs believe to be recognizable objects with 99.99\% confidence (e.g. labeling with certainty that white noise static is a lion). Specifically, we take convolutional neural networks trained to perform well on either the ImageNet or MNIST datasets and then find images with evolutionary algorithms or gradient ascent that DNNs label with high confidence as belonging to each dataset class. It is possible to produce images totally unrecognizable to human eyes that DNNs believe with near certainty are familiar objects, which we call "fooling images" (more generally, fooling examples). Our results shed light on interesting differences between human vision and current DNNs, and raise questions about the generality of DNN computer vision.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Neural and Evolutionary Computing},
+  file = {/Users/lindepav/Zotero/storage/Y9HB6KQN/Nguyen et al. - 2015 - Deep Neural Networks are Easily Fooled High Confi.pdf;/Users/lindepav/Zotero/storage/7ZNQPLS7/1412.html}
+}
+
+@article{Trohidis2011,
+  title = {Multi-Label Classification of Music by Emotion},
+  author = {Trohidis, Konstantinos and Tsoumakas, Grigorios and Kalliris, George and Vlahavas, Ioannis},
+  year = {2011},
+  month = dec,
+  journal = {EURASIP Journal on Audio, Speech, and Music Processing},
+  volume = {2011},
+  number = {1},
+  pages = {4},
+  issn = {1687-4722},
+  doi = {10.1186/1687-4722-2011-426793}
+}
+
+@article{Tsoumakas2007,
+  title = {Multi-Label Classification},
+  author = {Tsoumakas, Grigorios and Katakis, Ioannis},
+  year = {2007},
+  month = jul,
+  journal = {International Journal of Data Warehousing and Mining},
+  volume = {3},
+  number = {3},
+  pages = {1--13},
+  issn = {1548-3924},
+  doi = {10.4018/jdwm.2007070101},
+  abstract = {\textexclamdown p\textquestiondown Multi-label classification methods are increasingly required by modern applications, such as protein function classification, music categorization, and semantic scene classification. This article introduces the task of multi-label classification, organizes the sparse related literature into a structured presentation and performs comparative experimental results of certain multilabel classification methods. It also contributes the definition of concepts for the quantification of the multi-label nature of a data set.\textexclamdown/p\textquestiondown}
+}
+
+@article{Wang2017,
+  title = {{{ChestX-ray8}}: {{Hospital-scale}} Chest {{X-ray}} Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases},
+  author = {Wang, Xiaosong and Peng, Yifan and Lu, Le and Lu, Zhiyong and Bagheri, Mohammadhadi and Summers, Ronald M.},
+  year = {2017},
+  month = may,
+  doi = {10.1109/CVPR.2017.369},
+  abstract = {The chest X-ray is one of the most commonly accessible radiological examinations for screening and diagnosis of many lung diseases. A tremendous number of X-ray imaging studies accompanied by radiological reports are accumulated and stored in many modern hospitals' Picture Archiving and Communication Systems (PACS). On the other side, it is still an open question how this type of hospital-size knowledge database containing invaluable imaging informatics (i.e., loosely labeled) can be used to facilitate the data-hungry deep learning paradigms in building truly large-scale high precision computer-aided diagnosis (CAD) systems. In this paper, we present a new chest X-ray database, namely "ChestX-ray8", which comprises 108,948 frontal-view X-ray images of 32,717 unique patients with the text-mined eight disease image labels (where each image can have multi-labels), from the associated radiological reports using natural language processing. Importantly, we demonstrate that these commonly occurring thoracic diseases can be detected and even spatially-located via a unified weakly-supervised multi-label image classification and disease localization framework, which is validated using our proposed dataset. Although the initial quantitative results are promising as reported, deep convolutional neural network based "reading chest X-rays" (i.e., recognizing and locating the common disease patterns trained with only image-level labels) remains a strenuous task for fully-automated high precision CAD systems. Data download link: https://nihcc.app.box.com/v/ChestXray-NIHCC}
+}
+
+@article{Wang2021,
+  title = {Can Multi-Label Classification Networks Know What They Don't Know?},
+  author = {Wang, Haoran and Liu, Weitang and Bocchieri, Alex and Li, Yixuan},
+  year = {2021},
+  month = sep,
+  abstract = {Estimating out-of-distribution (OOD) uncertainty is a central challenge for safely deploying machine learning models in the open-world environment. Improved methods for OOD detection in multi-class classification have emerged, while OOD detection methods for multi-label classification remain underexplored and use rudimentary techniques. We propose JointEnergy, a simple and effective method, which estimates the OOD indicator scores by aggregating energy scores from multiple labels. We show that JointEnergy can be mathematically interpreted from a joint likelihood perspective. Our results show consistent improvement over previous methods that are based on the maximum-valued scores, which fail to capture joint information from multiple labels. We demonstrate the effectiveness of our method on three common multi-label classification benchmarks, including MS-COCO, PASCAL-VOC, and NUS-WIDE. We show that JointEnergy can reduce the FPR95 by up to 10.05\% compared to the previous best baseline, establishing state-of-the-art performance.}
+}
+
+@article{Yang2021,
+  title = {Generalized Out-of-Distribution Detection: {{A}} Survey},
+  author = {Yang, Jingkang and Zhou, Kaiyang and Li, Yixuan and Liu, Ziwei},
+  year = {2021},
+  month = oct,
+  abstract = {Out-of-distribution (OOD) detection is critical to ensuring the reliability and safety of machine learning systems. For instance, in autonomous driving, we would like the driving system to issue an alert and hand over the control to humans when it detects unusual scenes or objects that it has never seen during training time and cannot make a safe decision. The term, OOD detection, first emerged in 2017 and since then has received increasing attention from the research community, leading to a plethora of methods developed, ranging from classification-based to density-based to distance-based ones. Meanwhile, several other problems, including anomaly detection (AD), novelty detection (ND), open set recognition (OSR), and outlier detection (OD), are closely related to OOD detection in terms of motivation and methodology. Despite common goals, these topics develop in isolation, and their subtle differences in definition and problem setting often confuse readers and practitioners. In this survey, we first present a unified framework called generalized OOD detection, which encompasses the five aforementioned problems, i.e., AD, ND, OSR, OOD detection, and OD. Under our framework, these five problems can be seen as special cases or sub-tasks, and are easier to distinguish. We then review each of these five areas by summarizing their recent technical developments, with a special focus on OOD detection methodologies. We conclude this survey with open challenges and potential research directions.}
+}
+
+@article{Zhang2017,
+  title = {Deep Extreme Multi-Label Learning},
+  author = {Zhang, Wenjie and Yan, Junchi and Wang, Xiangfeng and Zha, Hongyuan},
+  year = {2017},
+  month = apr,
+  abstract = {Extreme multi-label learning (XML) or classification has been a practical and important problem since the boom of big data. The main challenge lies in the exponential label space which involves 2\textsuperscript{L} possible label sets especially when the label dimension L is huge, e.g., in millions for Wikipedia labels. This paper is motivated to better explore the label space by originally establishing an explicit label graph. In the meanwhile, deep learning has been widely studied and used in various classification problems including multi-label classification, however it has not been properly introduced to XML, where the label space can be as large as in millions. In this paper, we propose a practical deep embedding method for extreme multi-label classification, which harvests the ideas of non-linear embedding and graph priors-based label space modeling simultaneously. Extensive experiments on public datasets for XML show that our method performs competitive against state-of-the-art result.}
+}
+
+@article{Zolfi2022,
+  title = {{{YolOOD}}: {{Utilizing}} Object Detection Concepts for out-of-Distribution Detection},
+  author = {Zolfi, Alon and Amit, Guy and Baras, Amit and Koda, Satoru and Morikawa, Ikuya and Elovici, Yuval and Shabtai, Asaf},
+  year = {2022},
+  month = dec,
+  abstract = {Out-of-distribution (OOD) detection has attracted a large amount of attention from the machine learning research community in recent years due to its importance in deployed systems. Most of the previous studies focused on the detection of OOD samples in the multi-class classification task. However, OOD detection in the multi-label classification task remains an underexplored domain. In this research, we propose YolOOD - a method that utilizes concepts from the object detection domain to perform OOD detection in the multi-label classification task. Object detection models have an inherent ability to distinguish between objects of interest (in-distribution) and irrelevant objects (e.g., OOD objects) on images that contain multiple objects from different categories. These abilities allow us to convert a regular object detection model into an image classifier with inherent OOD detection capabilities with just minor changes. We compare our approach to state-of-the-art OOD detection methods and demonstrate YolOOD's ability to outperform these methods on a comprehensive suite of in-distribution and OOD benchmark datasets.}
+}

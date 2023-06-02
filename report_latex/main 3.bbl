@@ -1,0 +1,141 @@
+\begin{thebibliography}{10}
+
+\bibitem{Amodei2016}
+Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Man{\'e}.
+\newblock Concrete problems in {{AI}} safety.
+\newblock June 2016.
+
+\bibitem{Hendrycks2016}
+Dan Hendrycks and Kevin Gimpel.
+\newblock A baseline for detecting misclassified and out-of-distribution examples in neural networks.
+\newblock October 2016.
+
+\bibitem{Wang2021}
+Haoran Wang, Weitang Liu, Alex Bocchieri, and Yixuan Li.
+\newblock Can multi-label classification networks know what they don't know?
+\newblock September 2021.
+
+\bibitem{Mohseni2021}
+Sina Mohseni, Arash Vahdat, and Jay Yadawa.
+\newblock Shifting transformation learning for out-of-distribution detection.
+\newblock June 2021.
+
+\bibitem{Zolfi2022}
+Alon Zolfi, Guy Amit, Amit Baras, Satoru Koda, Ikuya Morikawa, Yuval Elovici, and Asaf Shabtai.
+\newblock {{YolOOD}}: {{Utilizing}} object detection concepts for out-of-distribution detection.
+\newblock December 2022.
+
+\bibitem{Yang2021}
+Jingkang Yang, Kaiyang Zhou, Yixuan Li, and Ziwei Liu.
+\newblock Generalized out-of-distribution detection: {{A}} survey.
+\newblock October 2021.
+
+\bibitem{Huang2021}
+Rui Huang and Yixuan Li.
+\newblock {{MOS}}: {{Towards}} scaling out-of-distribution detection for large semantic space.
+\newblock May 2021.
+
+\bibitem{Tsoumakas2007}
+Grigorios Tsoumakas and Ioannis Katakis.
+\newblock Multi-label classification.
+\newblock {\em International Journal of Data Warehousing and Mining}, 3(3):1--13, July 2007.
+
+\bibitem{Zhang2017}
+Wenjie Zhang, Junchi Yan, Xiangfeng Wang, and Hongyuan Zha.
+\newblock Deep extreme multi-label learning.
+\newblock April 2017.
+
+\bibitem{Trohidis2011}
+Konstantinos Trohidis, Grigorios Tsoumakas, George Kalliris, and Ioannis Vlahavas.
+\newblock Multi-label classification of music by emotion.
+\newblock {\em EURASIP Journal on Audio, Speech, and Music Processing}, 2011(1):4, December 2011.
+
+\bibitem{Wang2017}
+Xiaosong Wang, Yifan Peng, Le~Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald~M. Summers.
+\newblock {{ChestX-ray8}}: {{Hospital-scale}} chest {{X-ray}} database and benchmarks on weakly-supervised classification and localization of common thorax diseases.
+\newblock May 2017.
+
+\bibitem{dosovitskiyImageWorth16x162021}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby.
+\newblock An {{Image}} is {{Worth}} 16x16 {{Words}}: {{Transformers}} for {{Image Recognition}} at {{Scale}}, June 2021.
+
+\bibitem{liuSSDSingleShot2016}
+Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Cheng-Yang Fu, and Alexander~C. Berg.
+\newblock {{SSD}}: {{Single Shot MultiBox Detector}}.
+\newblock volume 9905, pages 21--37. 2016.
+
+\bibitem{bochkovskiyYOLOv4OptimalSpeed2020}
+Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan~Mark Liao.
+\newblock {{YOLOv4}}: {{Optimal Speed}} and {{Accuracy}} of {{Object Detection}}, April 2020.
+
+\bibitem{girshickRichFeatureHierarchies2014}
+Ross Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik.
+\newblock Rich feature hierarchies for accurate object detection and semantic segmentation, October 2014.
+
+\bibitem{heMaskRCNN2018}
+Kaiming He, Georgia Gkioxari, Piotr Doll{\'a}r, and Ross Girshick.
+\newblock Mask {{R-CNN}}, January 2018.
+
+\bibitem{dykstraKullbackLeiblerInformation2005}
+Richard Dykstra.
+\newblock Kullback\textendash{{Leibler Information}}.
+\newblock July 2005.
+
+\bibitem{nguyenDeepNeuralNetworks2015}
+Anh Nguyen, Jason Yosinski, and Jeff Clune.
+\newblock Deep {{Neural Networks}} are {{Easily Fooled}}: {{High Confidence Predictions}} for {{Unrecognizable Images}}, April 2015.
+
+\bibitem{Liang2017}
+Shiyu Liang, Yixuan Li, and R.~Srikant.
+\newblock Enhancing the reliability of out-of-distribution image detection in neural networks.
+\newblock {\em 6th International Conference on Learning Representations, ICLR 2018 - Conference Track Proceedings}, June 2017.
+
+\bibitem{leeSimpleUnifiedFramework2018}
+Kimin Lee, Kibok Lee, Honglak Lee, and Jinwoo Shin.
+\newblock A {{Simple Unified Framework}} for {{Detecting Out-of-Distribution Samples}} and {{Adversarial Attacks}}, October 2018.
+
+\bibitem{liuEnergybasedOutofdistributionDetection2021}
+Weitang Liu, Xiaoyun Wang, John~D. Owens, and Yixuan Li.
+\newblock Energy-based {{Out-of-distribution Detection}}, April 2021.
+
+\bibitem{Amit2020}
+Guy Amit, Moshe Levy, Ishai Rosenberg, Asaf Shabtai, and Yuval Elovici.
+\newblock {{FOOD}}: {{Fast}} out-of-distribution detector.
+\newblock August 2020.
+
+\bibitem{Lee2018}
+Kimin Lee, Kibok Lee, Honglak Lee, and Jinwoo Shin.
+\newblock A simple unified framework for detecting out-of-distribution samples and adversarial attacks.
+\newblock July 2018.
+
+\bibitem{huangImportanceGradientsDetecting2021}
+Rui Huang, Andrew Geng, and Yixuan Li.
+\newblock On the {{Importance}} of {{Gradients}} for {{Detecting Distributional Shifts}} in the {{Wild}}, October 2021.
+
+\bibitem{hendrycksScalingOutofDistributionDetection2022}
+Dan Hendrycks, Steven Basart, Mantas Mazeika, Andy Zou, Joe Kwon, Mohammadreza Mostajabi, Jacob Steinhardt, and Dawn Song.
+\newblock Scaling {{Out-of-Distribution Detection}} for {{Real-World Settings}}, May 2022.
+
+\bibitem{linMicrosoftCOCOCommon2015}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, Lubomir Bourdev, Ross Girshick, James Hays, Pietro Perona, Deva Ramanan, C.~Lawrence Zitnick, and Piotr Doll{\'a}r.
+\newblock Microsoft {{COCO}}: {{Common Objects}} in {{Context}}, February 2015.
+
+\bibitem{everinghamPascalVisualObject2015}
+Mark Everingham, S.~M.~Ali Eslami, Luc Van~Gool, Christopher K.~I. Williams, John Winn, and Andrew Zisserman.
+\newblock The {{Pascal Visual Object Classes Challenge}}: {{A Retrospective}}.
+\newblock {\em International Journal of Computer Vision}, 111(1):98--136, January 2015.
+
+\bibitem{dengImageNetLargescaleHierarchical2009}
+Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li~{Fei-Fei}.
+\newblock {{ImageNet}}: {{A}} large-scale hierarchical image database.
+\newblock In {\em 2009 {{IEEE Conference}} on {{Computer Vision}} and {{Pattern Recognition}}}, pages 248--255, June 2009.
+
+\bibitem{proencaTACOTrashAnnotations2020}
+Pedro~F. Proen{\c c}a and Pedro Sim{\~o}es.
+\newblock {{TACO}}: {{Trash Annotations}} in {{Context}} for {{Litter Detection}}, March 2020.
+
+\bibitem{cimpoiDescribingTexturesWild2013}
+Mircea Cimpoi, Subhransu Maji, Iasonas Kokkinos, Sammy Mohamed, and Andrea Vedaldi.
+\newblock Describing {{Textures}} in the {{Wild}}, November 2013.
+
+\end{thebibliography}

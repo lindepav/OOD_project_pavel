@@ -1,0 +1,14 @@
+\section{Conclusion}
+In this report, we provided a comprehensive overview of Out-Of-Distribution (OOD) detectors along with their timelines. 
+We thoroughly discussed the main concepts behind each of the methods and formalized the scoring functions. 
+Although there are numerous approaches for OOD detection in multi-class classifiers, the multi-label setting has not yet been fully explored. 
+We have observed the implementation of existing methods in this domain and have also noted the emergence of new approaches such as YolOOD, 
+which have produced interesting results as well. Some of the methods were implemented and quantitative results were produced. 
+This could be used for benchmarking on new set of datasets. 
+We attempted to convert GradNorm directly to the multi-label setting, but discovered that it does not produce a valid classifier. 
+
+\section{Future Work}
+There is a lot of potential areas to explore.
+Existing approaches could be explored more and adapted for multi-label settings.
+As suggested by~\cite{Zolfi2022}, using a different dataset that contains pixel-level annotations for training object detector will allow to learn accurate representations without irrelevant areas.
+Another direction is to evaluate on large-scale dataset that mimic real-world settings.~\cite{hendrycksScalingOutofDistributionDetection2022,Huang2021}

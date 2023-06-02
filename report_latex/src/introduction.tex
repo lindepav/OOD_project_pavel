@@ -1,0 +1,38 @@
+\section{Introduction}
+
+%1.Why are we doing this, how is it useful?
+Artificial Intelligence (AI) has become a topic of great interest among the general public especially in recent times. 
+Machine Learning (ML) models are being widely adopted across various domains to handle a wide range of tasks, 
+and novel applications are being discovered every day. When deploying machine learning models in real-world scenarios, 
+our primary concern is typically centered around the ultimate precision of the predictive outcomes. 
+However, it is equally crucial to take into account the reliability and validity of these predictions. 
+One must assess whether the model's high response is a result of its exposure to comparable data during training or if it is yielding 
+unreliable predictions for unexplored data that was not previously encountered during the training process.
+
+Modern deep learning models can easily produce these overconfident predictions. 
+This issue not only decreases a model's robustness but also raises significant concerns in areas such as medical care, where incorrect diagnoses can result in severe outcomes. 
+Further, it can also question the safety in AI \cite{Amodei2016}.
+A new area of research called Out-Of-Distribution (OOD) detection aims to get rid of this vulnerability by determining whether an input is in-distribution (ID) or OOD. \cite{Hendrycks2016} \cite{Wang2021} \cite{Mohseni2021} \cite{Zolfi2022} \cite{Yang2021} \cite{Huang2021}
+By identifying OOD samples, models can decrease the risk of inaccurate predictions, speed up human intervention when necessary, and establish a dependable and secure incorporation of machine learning technologies across a range of domains.
+
+%2.What is the core hypothesis of the work?
+Over the years, extensive research has been carried out on multi-class classification; 
+however, the multi-label task remains an area that has been largely underexplored. 
+The goal of this work is to provide a comprehensive analysis of the different techniques and trends 
+utilized in multi-label OOD detectors, while also categorizing and discussing the various methods employed. 
+Additionally, we offer a concise overview of the multi-class context to show the fundamental concepts. 
+We would see that multi-class and multi-label problems are connected and it makes sense to study both.
+
+
+%3.How do we want to verify and evaluate the hypothesis?
+We assess state-of-the-art methods for multi-label OOD detection using pre-trained networks and identical methodology.
+We select MSP~\cite{Hendrycks2016}, JointEnergy\cite{Wang2021} and ODIN\cite{Liang2017}. 
+All methods have the same evaluation pipeline. 
+Evaluation is performed by two different classification networks on three public datasets. 
+A new comparison of methods is made by selecting datasets where benchmarking was not done yet for all the methods.
+
+%4.What did we need to do to perform the evaluation?
+The evaluation used two different models trained on MS-COCO\cite{linMicrosoftCOCOCommon2015} and Pascal\cite{everinghamPascalVisualObject2015} dataset. 
+For OOD detection, three datasets were used: a subset of ImageNet22k\cite{dengImageNetLargescaleHierarchical2009}, TACO\cite{proencaTACOTrashAnnotations2020}, and Textures\cite{cimpoiDescribingTexturesWild2013}. 
+JointEnergy performed the best across all three OOD datasets. 
+

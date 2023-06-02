@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: main.bib
+Warning--empty journal in Amodei2016
+Warning--empty journal in Hendrycks2016
+Warning--empty journal in Wang2021
+Warning--empty journal in Mohseni2021
+Warning--empty journal in Zolfi2022
+Warning--empty journal in Yang2021
+Warning--empty journal in Huang2021
+Warning--empty journal in Zhang2017
+Warning--empty journal in Wang2017
+Warning--empty booktitle in liuSSDSingleShot2016
+Warning--empty publisher in liuSSDSingleShot2016
+Warning--empty booktitle in dykstraKullbackLeiblerInformation2005
+Warning--empty publisher in dykstraKullbackLeiblerInformation2005
+Warning--empty journal in Amit2020
+Warning--empty journal in Lee2018
+You've used 30 entries,
+            1791 wiz_defined-function locations,
+            602 strings with 9864 characters,
+and the built_in function-call counts, 5967 in all, are:
+= -- 381
+> -- 473
+< -- 3
++ -- 168
+- -- 138
+* -- 428
+:= -- 1011
+add.period$ -- 79
+call.type$ -- 30
+change.case$ -- 30
+chr.to.int$ -- 0
+cite$ -- 45
+duplicate$ -- 235
+empty$ -- 541
+format.name$ -- 138
+if$ -- 1260
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 18
+newline$ -- 141
+num.names$ -- 30
+pop$ -- 167
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 126
+stack$ -- 0
+substring$ -- 97
+swap$ -- 35
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 15
+while$ -- 41
+width$ -- 32
+write$ -- 271
+(There were 15 warnings)

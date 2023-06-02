@@ -1,0 +1,104 @@
+\section{Experiments}
+In this section, we evaluate some of the existing state-of-the-art methods for multi-label OOD detection
+ on public datasets in order to assess how they compare on identical settings. 
+ To compare state-of-the-art methods, we will be using pre-trained networks with identical weights and experimentation methodology.
+
+To provide a nice overview of the methods we select \textbf{MSP} as a baseline of multi-label OOD detection and \textbf{JointEnergy} with \textbf{Mahalanobis} for state-of-the-art methods.
+\textbf{JointEnergy} and \textbf{MSP} are instances of output-based and \textbf{Mahalanobis} are instances of feature-based detectors.
+All three methods were implemented to have the same evaluation pipeline. 
+As a bonus, \textbf{GradNorm} for gradient-based methods will be tried to utilize for multi-label classifiers.
+
+The evaluation was performed on datasets that have been utilized across multiple papers about multi-label OOD detection. 
+As an outcome a new comparison of the methods will be made. 
+For the purpose of evaluation, datasets utilized in both of these works were utilized. 
+The labels of the ID datasets are different from the labels of the OOD datasets in this evaluation to reduce bias.
+
+\subsection{Experimental setup}
+\paragraph{ID datasets}
+We will use two multi-label datasets: MS-COCO\cite{linMicrosoftCOCOCommon2015} and PASCAL-VOC\cite{everinghamPascalVisualObject2015}. 
+These datasets are used to train multi-label classifier and for producing ID reliability scores. 
+
+\paragraph{OOD datasets}
+To assess the models trained on the ID datasets, we adopt the same approach as described in \cite{Wang2021}. 
+We select a subset of ImageNet\cite{dengImageNetLargescaleHierarchical2009} dataset, the whole Textures\cite{cimpoiDescribingTexturesWild2013} dataset and the whole TACO\cite{proencaTACOTrashAnnotations2020} dataset.
+For ImageNet, we use the same set of 20 classes as in \cite{Wang2021} to have different labels than ID datasets.
+Textures dataset was used both in \cite{Wang2021} and \cite{huangImportanceGradientsDetecting2021}.
+Finally, TACO dataset was used in \cite{Zolfi2022} and other papers.
+By this selection we should cover different class domains and provide new insights.
+
+\paragraph{Classification model training}
+We deploy two classifiers sourced from the study by Wang et al.\cite{Wang2021} featuring DenseNet-121 architecture. 
+These classifiers were initially trained on ImageNet-1K and subsequently fine-tuned through the utilization of sigmoid function.
+Data was augmented with random crops and flips. 
+Achieved mAP is 87.51\% for PASCAL-VOC, 73.83\% for MS-COCO. 
+
+\subsection{OOD detection}
+\paragraph{MSP, JointEnergy, Mahalanobis}
+We use the public implementation of original authors to produce OOD scores. 
+
+\paragraph{GradNorm}
+Since GradNorm has yet to be adopted for multi-label classifiers, it is necessary to adjust the original implementation. 
+For our implementation, we have set the parameters in the same fashion as the authors of GradNorm did, with temperature T being equal to 1 and using the gradients weights of the last layer only. 
+Although binary cross-entropy loss with logits is used for the multi-label classifier, it is still noteworthy that we compute cross-entropy loss here. 
+The multi-label classifier does not utilize softmax on the network's output, but rather employs the sigmoid function to generate a K-long vector of class probabilities. 
+This vector is exactly what we need to calculate GradNorm, and hence, we can utilize it in a way displayed below.
+
+\noindent To generate GradNorm scores, one must execute the following steps:
+\begin{itemize}
+    \itemsep0em 
+    \item use the classifier to produce the predicted probability distribution over classes $[K \times 1]$ vector
+    \item divide the probability distribution by temperature T
+    \item compute gradients of KL divergence as average the derivative of the cross-entropy loss for all labels
+    \item perform backward pass of the network
+    \item get the last layer's output and compute the first norm
+\end{itemize}
+
+\subsection{Evaluation settings}
+\paragraph{Evaluation pipeline}
+For every classifier, scores are computed from In-Distribution (ID) datasets as \textbf{inScores} 
+and scores for Out-Of-Distribution (OOD) datasets as \textbf{outScores}. 
+OOD detection is a binary classification so it requires the generation of ground truth labels. 
+In the case of \textit{inScores}, the ground truth is set to 0 since we know that they contain labels which they were trained for. 
+Alternatively, for \textit{outScores}, the ground truth is set to 1. 
+Metrics are then computed from both \textit{inScores} and \textit{outScores} along with their corresponding ground truth labels.
+
+\paragraph{Metrics}
+The evaluation of performance is executed by means of metrics that are widely utilized in the field of Out-of-Distribution (OOD) detection. 
+These metrics include:
+
+\begin{enumerate}[label=(\alph*)]
+\item FPR95 - the false positive rate of OOD samples when the true positive rate is at 95\%
+\item AuROC - the area beneath the receiver operating characteristic curve
+\item AuPR - the area beneath the precision-recall curve
+\end{enumerate}
+
+\subsection{Results}
+The evaluation was done with two different models (trained on MS-COCO and Pascal dataset). 
+Also for the OOD detection we use three datasets (subset of ImageNet22k, TACO and Textures).
+In \autoref{table:idk} you can see the average results over the OOD datasets for JointEnergy, MSP and Mahalanobis. 
+We see that JointEnergy has the best performance across all OOD datasets.
+
+The results from GradNorm implementation with the same setting as describe above were opposing the expectations. 
+ID image samples produces lesser scores than OOD image sample which is in contrary to the study by~\cite{huangImportanceGradientsDetecting2021}.
+There must be more experimantation done with this but we can state that the direct translation of the method does not work. 
+
+
+\begin{table}[]
+\begin{tabular}{clllllll}
+\hline
+\multicolumn{1}{l}{}                   &                    & \multicolumn{3}{c}{MS-COCO}                                                                & \multicolumn{3}{c}{PASCAL}                                          \\
+\multicolumn{1}{l}{}                   &                    & \multicolumn{1}{c}{\textbf{}} & \multicolumn{1}{c}{\textbf{FPR95}} & \textbf{AUROC}        & \textbf{AUPR}         & \textbf{}            & \textbf{}            \\
+\multicolumn{1}{l}{}                   & \textbf{OOD score} & \multicolumn{1}{c}{\textbf{}} & \multicolumn{1}{c}{\textbf{↓}}     & \multicolumn{1}{c}{↑} & \multicolumn{1}{c}{↑} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\ \hline
+\multicolumn{1}{c|}{\textit{}}         & MSP                & 79.69                         & 74.74                              & 85.40                 & 74.04                 & 79.34                & 72.58                \\
+\multicolumn{1}{c|}{\textit{ImageNet}} & ODIN               & 42.21                         & 87.72                              & 91.43                 & 46.23                 & 85.23                & 90.23                \\
+\multicolumn{1}{c|}{\textit{}}         & JointEnergy        & \textbf{33.34}                & \textbf{92.73}                     & \textbf{96.26}        & 40.98                 & 91.12                & 86.36                \\ \cline{2-8} 
+\multicolumn{1}{c|}{\textit{}}         & MSP                & 47.11                         & 87.55                              & 97.57                 & 39.82                 & 92.41                & 95.91                \\
+\multicolumn{1}{c|}{\textit{Textures}} & ODIN               & 15.33                         & 96.10                              & 98.54                 & 16.02                 & 95.32                & 98.14                \\
+\multicolumn{1}{c|}{\textit{}}         & JointEnergy        & \textbf{9.7}                  & 97.28                              & \textbf{99.56}        & 10.83                 & \textbf{97.39}       & 98.62                \\ \cline{2-8} 
+\multicolumn{1}{c|}{\textit{}}         & MSP                & 55.93                         & 86.05                              & 99.35                 & 70.40                 & 82.81                & 99.16                \\
+\multicolumn{1}{c|}{\textit{TACO}}     & ODIN               & 29.23                         & 92.34                              & 97.23                 & 27.54                 & 93.43                & 97.80                \\
+\multicolumn{1}{l|}{}                  & JointEnergy        & 20.20                         & 95.82                              & 99.82                 & \textbf{11.80}        & \textbf{97.51}       & \textbf{99.90}       \\ \hline
+\end{tabular}
+\label{table:idk}
+\end{table}
+

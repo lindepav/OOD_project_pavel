@@ -1,0 +1,97 @@
+\section{OOD detection in multi-class setting}
+In 2015, Nguyen et al.~\cite{nguyenDeepNeuralNetworks2015} exploid the vulnerability of deep networks.
+They found that one cause of overconfidence for OOD data is due to the nature of the fast-growing exponential function used in computing softmax probabilities.
+Small changes to the logits can result in significant changes to the output distribution. The direct correlation between prediction probability and confidence in a softmax distribution is poor.
+
+\subsection{MSP detector}
+\paragraph{Maximum Softmax Probability (MSP) score}
+In 2016, Hendrycks and colleagues~\cite{Hendrycks2016} took a significant step towards addressing the vulnerabilities of neural networks. The main findings can be concluded as follows. 
+The probability of correctly classified examples is higher than that of misclassified and out-of-distribution examples. 
+Thus, by capturing the statistics of prediction probabilities of correct examples, we can use them to detect whether an example is in error or abnormal. 
+It is important to note that relying solely on softmax probabilities may lead to unreliable outcomes. 
+However, analyzing the statistics of these probabilities is yet effective across various domains, including computer vision. 
+This work has become a baseline for OOD detection in multi-class settings and is still used for benchmarking state-of-the-art methods.
+
+\subsection{Out-of-DIstribution detector for Neural networks (ODIN)}
+\paragraph{Temperature scaling and input pre-processing}
+In 2017, Liang et al.~presented another output-based approach known as ODIN~\cite{Liang2017} 
+(Out-of-DIstribution detector for Neural networks). 
+ODIN is a technique that uses temperature scaling and input pre-processing (adding small perturbations). 
+It aims to effectively separate the softmax probability distributions of in-and-out-of-distribution images. 
+This separation enables more accurate and efficient OOD detection.
+Temperature scaling involves scaling the logits (inputs to the softmax function) by a temperature parameter $T$ before computing the softmax function. 
+This has the effect of sharpening the softmax output, making it easier to distinguish between in-distribution and out-of-distribution images.
+
+\subsection{Mahalanobis distance detector}
+\paragraph{Mahalanobis distance}
+In 2018, Lee et al.~\cite{leeSimpleUnifiedFramework2018} introduced a new feature-based approach for detecting out-of-distribution (OOD) samples, which can be applied to any pre-trained softmax neural classifier without requiring to re-train.
+The method uses a `generative' (distance-based) classifier to measure the probability density of test samples on feature spaces of Deep Neural Networks (DNNs). 
+The authors assume that pre-trained low and upper level features can be fitted well by a class-conditional Gaussian distribution. 
+Confidence score is defined using the Mahalanobis distance with respect to the closest class-conditional distribution. 
+
+\subsection{Energy-based detector}
+\paragraph{Energy score}
+In 2021, Liu, Wang, et al.~\cite{liuEnergybasedOutofdistributionDetection2021} presented a new method that uses outputs of the DNNs. 
+Instead of employing softmax scores, as with the MSP approach, they employ energy scores, 
+which better distinguish between in- and out-of-distribution samples. 
+Unlike softmax confidence scores, energy scores are theoretically aligned with the probability density 
+of the inputs and are less susceptible to the overconfidence issue. 
+Energy can be flexibly used as a scoring function for any pre-trained neural classifier, as well as a trainable cost function to explicitly shape the energy surface for OOD detection.
+Energy score function was introduced in \autoref{energy} and for a given input 
+$(\mathbf{x}, y)$ is defined as $E(\mathbf{x}, y) = -f_y (\mathbf{x})$. 
+Without altering the parameterization of the neural network $f(\mathbf{x})$, we can define the \textbf{free energy function} $E(\mathbf{x}; f)$ over $\mathbf{x} \in \mathbb{R}^D$  in terms of the denominator of the softmax activation:
+
+\begin{equation}
+\centering
+E(\mathbf{x}, f) = - T * \log{\sum_{i}^{K}{e^{f_i(\mathbf{x})/T}}}
+\end{equation}
+
+where K is the number of classes and $T$ is the temperature parameter.
+
+\subsection{Fast Out-Of-Distribution Detector (FOOD)}
+\paragraph{Statistical testing and additional output neuron}
+In 2021, Amit and Levy~\cite{Amit2020} proposed a Fast Out-Of-Distribution Detector (FOOD) that efficiently detects out-of-distribution (OOD) samples with minimal inference time overhead. 
+The paper presents a DNN model with a final Gaussian layer that models a density function for each class and a rapid OOD detector that does not require OOD samples for training or hyperparameter tuning. 
+The paper uses a log likelihood ratio statistical test and an additional output neuron for OOD detection.
+
+\subsection{GradNorm}
+\paragraph{Categorizing OOD detectors}
+We can categorize the OOD detection methods that have been implemented into two main groups: \textbf{output-based} and \textbf{feature-based}. 
+Output-based detectors employ the output of neural networks which is then computed using an aggregation function (such as max or sum) and a scoring function to detect OOD instances. E
+xamples of these methods include ODIN\cite{Liang2017}, Energy-based\cite{liuEnergybasedOutofdistributionDetection2021}, and MSP\cite{Hendrycks2016}. 
+On the other hand, feature-based detectors utilize the feature space to distinguish between OOD and ID samples. 
+Mahalanobis distance based detection\cite{Lee2018} is an example of this method.
+
+\paragraph{Using KL divergence}
+In 2021,~Huang, Rui and Geng~\cite{huangImportanceGradientsDetecting2021} introduced a novel approach for OOD detection called GradNorm. 
+Their method utilizes information extracted from the \textbf{gradient space}. 
+The main idea proposed in this paper is to use the vector norm of gradients, which are backpropagated from the \textbf{KL divergence} between the softmax output 
+and a uniform probability distribution, as a means of detecting OOD inputs. 
+
+Definition for KL divergence can be find in \autoref{KL:equation}.
+For this method we set the reference distribution to be uniform $\mathbf{u} = [1/C, 1/C, ..., 1/C] \in \mathbb{R}^C$ . The predictive probability distribution is represented by the softmax output.
+KL divergence then becomes:
+\begin{equation}
+\label{KL:equation2}
+    D_{KL} = (\mathbf{u} \parallel \text{softmax}(f(\mathbf{x}))) =
+    \frac{1}{C}\sum_{c=1}^{K}{\log{\frac{e^{f_c(\mathbf{x})/T}}
+                                           {\sum_{j=1}^{C}{e^{f_j(\mathbf{x})/T}}}}} - H(\mathbf{u})
+\end{equation}
+where the first term is the cross-entropy loss with a uniform vector u, and the second term is a constant H(u). 
+KL divergence measures how far the predictive distribution is from the uniform distribution. 
+ID data is expected to have a larger KL divergence because the prediction tends to concentrate on one of the ground-truth classes and is therefore less uniformly distributed. 
+
+\paragraph{GradNorm score}
+This technique does not directly employ KL divergence, but instead utilizes the gradient vector norm, which is propagated backwards from the KL divergence. The OOD score is then defined as:
+\begin{equation}
+\label{KL:equation3}
+    S(\mathbf{x}) = 
+    \Vert
+    \pdv{D_{KL}(\mathbf{u} \parallel \text{softmax}(f(\mathbf{x})))}
+    {\mathbf{w}}
+    \Vert
+\end{equation}
+
+where $\mathbf{w}$ is is the set of parameters in vector form and $\Vert$.$\Vert$ denotes $L_1$ norm\dots
+
+At the end exploring gradient space proved to be useful and this become a new state-of-the-art method.

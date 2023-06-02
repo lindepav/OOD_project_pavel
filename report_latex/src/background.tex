@@ -1,0 +1,63 @@
+\section{Background}\label{background}
+\paragraph{Multi-label classification} 
+Multi-label classification is an instance of supervised learning problem there each input sample can be associated with multiple labels simultaneously. 
+This approach differs from the traditional multi-class classification, which assigns only a single label to each sample. 
+Multi-label classification allows the presence of multiple or even zero labels for a given input. 
+This makes it a more adaptable and comprehensive approach, making it suitable for several real-world scenarios.
+
+Formally, let $\mathcal{X}$ (respectively, $\mathcal{Y}$) denote the input (respectively, output) space of classifier $f : \mathcal{X} \rightarrow \mathbb{R}^{|\mathcal{Y}|}$ 
+trained on samples drawn from distribution $\mathcal{P}$, where $\mathcal{P}$ is a distribution over $\mathcal{X} \times \mathcal{Y}$. 
+Each input sample $x \in \mathcal{X}$ is associated with a set of labels $Y = {1, 2, ... , K}$ represented as a binary vector $y = [y_1, y_2, ... , y_K]$, where $y_i = 1$ if input sample $x$ is associated with class $i$, and 0 otherwise.
+
+To illustrate, consider the example of image classification. In a multi-label setting, an image can have multiple objects or attributes of interest. For instance, an image may contain a cat, a dog, and a tree simultaneously. Instead of assigning a single label to the image, a multi-label classifier would predict a binary vector where the elements corresponding to "cat," "dog," and "tree" are all set to 1.
+
+For OOD detection we will utilize neural networks with a shared feature space to obtain a multi-label output prediction. 
+As opposite to the approach of training disjoint classifiers as proposed in literature \cite{Tsoumakas2007}, implementing the end-to-end training method with a shared feature space is more computationally efficient than training K completely independent models. 
+Multi-label classification models are now mostly trained using this technique, which has been shown to work effectively in various domains \cite{Zhang2017} \cite{Trohidis2011} \cite{Wang2017}.
+
+\subparagraph{Multi-class classification} 
+The difference between multi-label and multi-class classification \cite{dosovitskiyImageWorth16x162021} is determined by the flexibility and granularity of the label assignments. Multi-label classification acknowledges the possibility of multiple labels being equivalently relevant simultaneously, accommodating more complex and diverse scenarios. 
+
+\paragraph{Object detection} 
+The goal of an object detector extends the task of classification and except classifying the objects present in an image it also provides their precise spatial localization by drawing bounding boxes around them. 
+This allows for accurate identification and tracking of objects of interest.
+There are several well-known object detectors such as SSD \cite{liuSSDSingleShot2016}, YOLO \cite{bochkovskiyYOLOv4OptimalSpeed2020}, R-CNN \cite{girshickRichFeatureHierarchies2014} and Mask R-CNN \cite{heMaskRCNN2018}. 
+
+\paragraph{Out-Of-Distribution detection}
+Out-Of-Distribution (OOD) detection can be formulated as an instance of binary classification. 
+Let $\mathcal{D}_{in}$ denote the marginal distribution of $\mathcal{P}$ over $\mathcal{X}$ which represents the distribution of in-distribution (ID) data.  
+In practise, OOD is frequently characterized by a distribution that emulates the uncertainties that arise during deployment, 
+such as samples from an irrelevant distribution whose label set does not intersect with $\mathcal{Y}$ and thus should not be predicted by the model. 
+We will denote this distribution over $\mathcal{X}$  as $\mathbb{D}_{out}$. 
+For OOD detector $G$ in multi-label setting with classifier $f$ we define a decision function for the binary classification as follows:
+
+\begin{equation}
+\centering
+G(\mathbf{x}, f) =
+\left\{
+	\begin{array}{ll}
+	    0  & \mbox{if } \mathbf{x} \sim \mathbb{D}_{out} \\
+		1  & \mbox{if } \mathbf{x} \sim \mathbb{D}_{in} 
+	\end{array}
+\right.
+\end{equation}
+
+\paragraph{Energy function}\label{energy}
+An energy function is a mathematical function that maps a scalar value to a given input. 
+In the context of the paper, the energy function is used to represent the cost or likelihood of a particular label. 
+Formally, the energy function 
+$E(x) : \mathcal{X} \rightarrow \mathbb{R}$ maps each point x of an input space to a scalar value called the energy.
+It assigns a high energy score to OOD samples and a low energy score to in-distribution samples. 
+
+\paragraph{Kullback-Leibler (KL) divergence}\label{KL_divergence}
+Kullback-Leibler (KL) divergence~\cite{dykstraKullbackLeiblerInformation2005} is a measure of the difference between two probability distributions. 
+KL divergence is defined as the expectation of the logarithmic difference between the model-predicted distribution $q = {q_i}$ and the reference distribution $p = {p_i}$. 
+Formally:
+
+\begin{equation}
+\label{KL:equation}
+	D_{KL} = (p \parallel q) =
+	\sum_{i}{p_i\log{\frac{p_i}{q_i}}} = 
+	\sum_{i}{p_i\log{q_i}} + \sum_{i}{p_i\log{p_i}} =
+	H(p, q) - H(p)
+\end{equation}

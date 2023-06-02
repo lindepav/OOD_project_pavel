@@ -1,0 +1,103 @@
+%Template author:   Tomáš Krajník
+
+%\pdfoutput=1
+\documentclass[a4paper,12pt,titlepage, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsfonts} 
+\usepackage{amsmath}
+\usepackage{derivative}
+\usepackage{enumitem}
+\newcommand{\Author}{Name Surname}
+\newcommand{\Title}{Detecting Out-Of-Distribution Samples with Object Detectors}
+\newcommand{\Acronym}{Acronym}
+\newcommand{\WorkPackage}{WorkPackage}
+\newcommand{\DocName}{thesis}
+\newcommand{\Subject}{\WorkPackage - \DocName}
+\newcommand{\Keywords}{mobile robots}
+\newcommand{\Date}{29/05/2023}
+\newcommand{\DOCVersion}{0.1}
+\newcommand{\RHead}{}
+
+\def\clinks{false}
+
+\input{src/doc_head}
+
+%\renewcommand{\lstlistlistingname}{List of Algorithms}%{Seznam výpisů kódu}
+%\renewcommand{\lstlistingname}{Listing} %{Výpis}
+\definecolor{background_color}{rgb}{1.0, 1.0, 0.85}
+\definecolor{comment_color}{rgb}{0.0, 0.5, 0.0}
+\definecolor{keyword_color}{rgb}{0.0, 0.0, 1.0}
+\definecolor{string_color}{rgb}{0.8, 0.0, 0.0}
+\lstset{language=ksh}
+\lstset{backgroundcolor=\color{background_color}}
+\lstset{frameround=tttt}
+\lstset{columns=fullflexible}
+\lstset{keywordstyle=\color{keyword_color}\bfseries}
+\lstset{commentstyle=\color{comment_color}}
+\lstset{stringstyle=\color{string_color}}
+\lstset{basicstyle=\ttfamily}
+\lstset{showstringspaces=false}
+\lstset{frame=single}
+\lstset{keepspaces=true}
+\lstset{tabsize=4}
+\lstset{breaklines=true}
+\lstset{captionpos=b}
+
+\begin{document}
+\DocBegin
+
+% --- TITLE PAGE
+\input{src/title}
+\pagestyle{empty}
+% \input{src/declaration}
+% \input{src/acknowledgement}
+% \input{src/abstract_en}
+% \input{src/abstract_cz}
+\pagestyle{fancy}
+\pagenumbering{roman}
+\cfoot{\thepage}
+\tableofcontents
+\pagebreak
+
+%\listoffigures
+%\pagebreak
+
+%\listoftables
+\pagebreak
+
+%\lstlistoflistings
+
+%\pagestyle{empty}
+\cleardoublepage
+\pagestyle{fancy}
+%\listofalgorithms
+
+% ---- CHAPTERS or SECTIONS in separate files
+\pagenumbering{arabic}
+\cfoot{}
+\rfoot{\thepage}
+%$/$\pageref{LastPage}
+\input{src/introduction}\clearpage
+\input{src/background}
+\input{src/sota}
+\input{src/system}\clearpage
+\input{src/datasets}\clearpage
+\input{src/experiments}\clearpage
+\input{src/conclusion}\clearpage
+
+% ---- CITATIONS
+\bibliography{main}
+\bibliographystyle{unsrt}
+
+\cleardoublepage
+\thispagestyle{empty}
+% \input{src/contents_cd}
+% ---- INDEX
+% \printindex
+
+% ---- list of to be done
+% \printtodolist
+\end{document}

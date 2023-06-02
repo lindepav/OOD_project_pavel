@@ -1,0 +1,51 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.2}%
+\contentsline {section}{\numberline {2}Background}{2}{section.3}%
+\contentsline {paragraph}{Multi-label classification}{2}{section*.4}%
+\contentsline {subparagraph}{Multi-class classification}{2}{section*.5}%
+\contentsline {paragraph}{Object detection}{2}{section*.6}%
+\contentsline {paragraph}{Out-Of-Distribution detection}{2}{section*.7}%
+\contentsline {paragraph}{Energy function}{3}{section*.9}%
+\contentsline {paragraph}{Kullback-Leibler (KL) divergence}{3}{section*.10}%
+\contentsline {section}{\numberline {3}OOD detection in multi-class setting}{3}{section.12}%
+\contentsline {subsection}{\numberline {3.1}MSP detector}{3}{subsection.13}%
+\contentsline {paragraph}{Maximum Softmax Probability (MSP) score}{3}{section*.14}%
+\contentsline {subsection}{\numberline {3.2}Out-of-DIstribution detector for Neural networks (ODIN)}{4}{subsection.15}%
+\contentsline {paragraph}{Temperature scaling and input pre-processing}{4}{section*.16}%
+\contentsline {subsection}{\numberline {3.3}Mahalanobis distance detector}{4}{subsection.17}%
+\contentsline {paragraph}{Mahalanobis distance}{4}{section*.18}%
+\contentsline {subsection}{\numberline {3.4}Energy-based detector}{4}{subsection.19}%
+\contentsline {paragraph}{Energy score}{4}{section*.20}%
+\contentsline {subsection}{\numberline {3.5}Fast Out-Of-Distribution Detector (FOOD)}{5}{subsection.22}%
+\contentsline {paragraph}{Statistical testing and additional output neuron}{5}{section*.23}%
+\contentsline {subsection}{\numberline {3.6}GradNorm}{5}{subsection.24}%
+\contentsline {paragraph}{Categorizing OOD detectors}{5}{section*.25}%
+\contentsline {paragraph}{Using KL divergence}{5}{section*.26}%
+\contentsline {paragraph}{GradNorm score}{6}{section*.28}%
+\contentsline {section}{\numberline {4}OOD detection in multi-label setting}{6}{section.30}%
+\contentsline {subsection}{\numberline {4.1}JointEnergy detector}{6}{subsection.31}%
+\contentsline {paragraph}{Using energy function and summation}{6}{section*.32}%
+\contentsline {subsection}{\numberline {4.2}YolOOD}{7}{subsection.36}%
+\contentsline {paragraph}{Using object detector}{7}{section*.37}%
+\contentsline {paragraph}{Network architecture}{8}{section*.38}%
+\contentsline {paragraph}{Yolo Objectness score}{8}{section*.39}%
+\contentsline {paragraph}{Class score}{8}{section*.42}%
+\contentsline {paragraph}{YolOOD score}{8}{section*.44}%
+\contentsline {section}{\numberline {5}Datasets}{10}{section.47}%
+\contentsline {paragraph}{MS-COCO}{10}{section*.48}%
+\contentsline {paragraph}{VOC-Pascal}{10}{section*.50}%
+\contentsline {paragraph}{ImageNet}{10}{section*.51}%
+\contentsline {paragraph}{TACO}{11}{section*.53}%
+\contentsline {section}{\numberline {6}Experiments}{12}{section.54}%
+\contentsline {subsection}{\numberline {6.1}Experimental setup}{12}{subsection.55}%
+\contentsline {paragraph}{ID datasets}{12}{section*.56}%
+\contentsline {paragraph}{OOD datasets}{12}{section*.57}%
+\contentsline {paragraph}{Classification model training}{12}{section*.58}%
+\contentsline {subsection}{\numberline {6.2}OOD detection}{12}{subsection.59}%
+\contentsline {paragraph}{MSP, JointEnergy, Mahalanobis}{12}{section*.60}%
+\contentsline {paragraph}{GradNorm}{13}{section*.61}%
+\contentsline {subsection}{\numberline {6.3}Evaluation settings}{13}{subsection.62}%
+\contentsline {paragraph}{Evaluation pipeline}{13}{section*.63}%
+\contentsline {paragraph}{Metrics}{13}{section*.64}%
+\contentsline {subsection}{\numberline {6.4}Results}{14}{subsection.68}%
+\contentsline {section}{\numberline {7}Conclusion}{15}{section.70}%
+\contentsline {section}{\numberline {8}Future Work}{15}{section.71}%
